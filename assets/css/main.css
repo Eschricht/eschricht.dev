@@ -1,0 +1,7 @@
+:root {
+  @apply font-sans artivue-surface-var artivue-text-var;
+}
+
+html {
+  overflow-y: scroll;
+}

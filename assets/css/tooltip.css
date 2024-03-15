@@ -1,0 +1,8 @@
+.v-popper--theme-tooltip .v-popper__inner {
+  background: #303030;
+  font-size: 0.8em;
+}
+
+.v-popper--theme-tooltip .v-popper__arrow-outer {
+  border-color: #303030;
+}
