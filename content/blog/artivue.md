@@ -48,13 +48,11 @@ const {
 
 Example - the `Card` component below uses `useThemeLayer()`:
 
-```vue
+```html
 <Card>
   <Card>
     <Card>
-      <Card>
-        Hello
-      </Card>
+      <Card> Hello </Card>
     </Card>
   </Card>
 </Card>
@@ -75,7 +73,7 @@ Hello
 Not only that, it is also possible to completely override the base theme! To do this, we simply pass a theme as the second argument.
 In the example below, the theme config passed to the `Card` component is passed to the composable - `useThemeLayer(0, props.theme)`
 
-```vue
+```html
 <Card
   :theme="{
     accentColor: '#2b6be3',
@@ -93,9 +91,7 @@ In the example below, the theme config passed to the `Card` component is passed 
         surfaceTextColor: '#fff',
       }"
     >
-      <Card>
-        Hello
-      </Card>
+      <Card> Hello </Card>
     </Card>
   </Card>
 </Card>
@@ -115,7 +111,7 @@ This can be useful when you want a different tone on a part of your page such as
 
 There is also a functional component, `ThemeLayer`, that wraps this composable and passes the returned values as slot props:
 
-```vue
+```html
 <ThemeLayer v-slot="{ className, isDark }">
   <div :class="className">d
     The theme is {{ isDark ? 'dark' : 'light' }}
@@ -125,7 +121,7 @@ There is also a functional component, `ThemeLayer`, that wraps this composable a
 
 It's also possible to let it render an element or component by the `is` prop. This will place `className` on the element for you:
 
-```vue
+```html
 <ThemeLayer is="div" v-slot="{ isDark }">
   The theme is {{ isDark ? 'dark' : 'light' }}
 </ThemeLayer>
