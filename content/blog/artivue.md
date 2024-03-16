@@ -2,12 +2,12 @@
 title: 'Artivue'
 description: 'Artivue'
 date: '2024/03/14'
-imgSrc: 'https://artivue.vercel.app/og-image.png'
+imgSrc: 'https://artivue.eschricht.dev/og-image.png'
 ---
 
 # Introducing Artivue!
 
-I just released an early draft of a Vue plugin named [artivue](https://artivue.vercel.app)!
+I just released an early draft of a Vue plugin named [artivue](https://artivue.eschricht.dev)!
 The plugin aims to help you effortlessly create beautiful themes to your Vue / Nuxt applications.
 
 Artivue is actually used on this very website with the `@artivue/nuxt` module. Have a look at the [settings](/settings) page and change the look and feel of this webpage!
@@ -27,7 +27,7 @@ That's when I decided to create something myself.
 The plugin accepts 4 color variables (surface bg / text and accent bg / text). From that configuration, Artivue creates tints and shades with the aid of [colord](https://colord.omgovich.ru/) and outputs a bunch of variables which is converted to a string of CSS variables within a CSS class.
 The CSS is injected to the application by [unhead](https://unhead.unjs.io/).
 
-The injected CSS variables can be used to your own liking but I also created a [UnoCSS preset](https://artivue.vercel.app/integrations/unocss.html) which omits a lot of custom CSS tinkering.
+The injected CSS variables can be used to your own liking but I also created a [UnoCSS preset](https://artivue.eschricht.dev/integrations/unocss.html) which omits a lot of custom CSS tinkering.
 
 But it doesn't stop there. The CSS variables is used for your base style of the application. But most often we also want to create layers (or nuances) of the base style such as card elements, headers, side bars, etc. Otherwise we end up with a very flat application.
 
@@ -153,7 +153,7 @@ function toggleDark() {
 As I mentioned in the beginning of this post - this is an early draft and breaking changes will probably occur in the coming months.
 If you find any issues with it or have suggestions, I would really appreciate if you would take the time and [report it](https://github.com/Eschricht/artivue/issues)
 
-Read the [docs](https://artivue.vercel.app) if you want to know more!
+Read the [docs](https://artivue.eschricht.dev) if you want to know more!
 
 Installation instructions:
 

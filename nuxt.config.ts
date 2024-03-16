@@ -13,7 +13,27 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase',
     'floating-vue/nuxt',
     '@artivue/nuxt',
+    '@nuxtjs/seo',
   ],
+
+  site: {
+    url: 'https://eschricht.dev',
+    name: 'Eschricht.dev',
+    description: 'By Johannes Eschricht',
+    defaultLocale: 'en',
+  },
+
+  ogImage: {
+    enabled: true,
+    defaults: {
+      width: 1200,
+      height: 600,
+      emojis: 'noto',
+      renderer: 'satori',
+      component: 'NuxtSeo',
+      cacheMaxAgeSeconds: 60 * 60 * 24 * 3,
+    },
+  },
 
   artivue: {
     theme: themes.midnight,

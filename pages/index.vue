@@ -1,3 +1,9 @@
+<script setup lang="ts">
+definePageMeta({
+  title: 'Eschricht.dev',
+})
+</script>
+
 <template>
   <div un-prose="~" class="slide-enter-content" un-font="300" un-overflow="hidden">
     <h1 un-font="900" un-tracking="wider" un-m="b-8" un-animated="~ fade-in" un-duration="100">
