@@ -21,7 +21,7 @@ const { data } = await useAsyncData('blog-entries', () => queryContent<BlogParse
 <template>
   <div>
     <ul v-if="data">
-      <li v-for="item in data" :key="item._id" un-m="b-4">
+      <li v-for="item in data" :key="item._id" un-m="b-6">
         <NuxtLink :to="localePath(item._path ?? '')" un-inline="flex" un-items="center" un-gap="4">
           <img v-if="item.imgSrc" :src="item.imgSrc" un-transition un-duration="400" un-object-contain alt="blog-image" un-flex="shrink-0" un-rounded="md" un-w="120px" un-aspect="2/1">
 

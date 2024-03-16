@@ -2,7 +2,6 @@
 title: 'Hello World'
 description: 'This is a test of @nuxt/content'
 date: '2024/02/27'
-imgSrc: '/images/logo-blog-img.png'
 ---
 
 ## Welcome to my blog!

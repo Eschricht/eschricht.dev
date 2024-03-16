@@ -117,13 +117,12 @@ Hello
 
 This can be useful when you want a different tone on a part of your page such as side menus, toasts etc.
 
-There is also a functional component, `ThemeLayer`, that wraps this composable and passes the returned values as slot props:
+There is also a wrapper component, `ThemeLayer`, that wraps this composable and passes the returned values as slot props:
 
 ```vue
 <template>
   <ThemeLayer v-slot="{ className, isDark }">
     <div :class="className">
-      d
       The theme is {{ isDark ? 'dark' : 'light' }}
       <div />
     </div>
@@ -131,7 +130,7 @@ There is also a functional component, `ThemeLayer`, that wraps this composable a
 </template>
 ```
 
-It's also possible to let it render an element or component by the `is` prop. This will place `className` on the element for you:
+By default, this component add any DOM elements but it's also possible to let it render an element or component by the `is` prop. This will place `className` on the element for you:
 
 ```vue
 <template>
