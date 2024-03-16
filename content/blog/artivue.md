@@ -48,14 +48,18 @@ const {
 
 Example - the `Card` component below uses `useThemeLayer()`:
 
-```html
-<Card>
+```vue
+<template>
   <Card>
     <Card>
-      <Card> Hello </Card>
+      <Card>
+        <Card>
+          Hello
+        </Card>
+      </Card>
     </Card>
   </Card>
-</Card>
+</template>
 ```
 
 Becomes:
@@ -73,28 +77,30 @@ Hello
 Not only that, it is also possible to completely override the base theme! To do this, we simply pass a theme as the second argument.
 In the example below, the theme config passed to the `Card` component is passed to the composable - `useThemeLayer(0, props.theme)`
 
-```html
-<Card
-  :theme="{
-    accentColor: '#2b6be3',
-    accentTextColor: '#fff',
-    surfaceColor: '#2c5963',
-    surfaceTextColor: '#fff',
-  }"
->
-  <Card>
-    <Card
-      :theme="{
-        accentColor: '#2b6be3',
-        accentTextColor: '#fff',
-        surfaceColor: '#3e2b46',
-        surfaceTextColor: '#fff',
-      }"
-    >
-      <Card> Hello </Card>
+```vue
+<template>
+  <Card
+    :theme="{
+      accentColor: '#2b6be3',
+      accentTextColor: '#fff',
+      surfaceColor: '#2c5963',
+      surfaceTextColor: '#fff',
+    }"
+  >
+    <Card>
+      <Card
+        :theme="{
+          accentColor: '#2b6be3',
+          accentTextColor: '#fff',
+          surfaceColor: '#3e2b46',
+          surfaceTextColor: '#fff',
+        }"
+      >
+        <Card> Hello </Card>
+      </Card>
     </Card>
   </Card>
-</Card>
+</template>
 ```
 
 ::Card{ class="p-4" :theme='{ "accentColor": "#2b6be3", "accentTextColor": "#fff", "surfaceColor": "#2c5963", "surfaceTextColor": "#fff" }' }
@@ -111,20 +117,26 @@ This can be useful when you want a different tone on a part of your page such as
 
 There is also a functional component, `ThemeLayer`, that wraps this composable and passes the returned values as slot props:
 
-```html
-<ThemeLayer v-slot="{ className, isDark }">
-  <div :class="className">d
-    The theme is {{ isDark ? 'dark' : 'light' }}
-  <div>
-</ThemeLayer>
+```vue
+<template>
+  <ThemeLayer v-slot="{ className, isDark }">
+    <div :class="className">
+      d
+      The theme is {{ isDark ? 'dark' : 'light' }}
+      <div />
+    </div>
+  </ThemeLayer>
+</template>
 ```
 
 It's also possible to let it render an element or component by the `is` prop. This will place `className` on the element for you:
 
-```html
-<ThemeLayer is="div" v-slot="{ isDark }">
-  The theme is {{ isDark ? 'dark' : 'light' }}
-</ThemeLayer>
+```vue
+<template>
+  <ThemeLayer is="div" v-slot="{ isDark }">
+    The theme is {{ isDark ? 'dark' : 'light' }}
+  </ThemeLayer>
+</template>
 ```
 
 The cherry on the top is the `useBaseTheme` composable. This composable lets you change the theme whenever you need to - such as when a user clicks a dark-mode switcher.
