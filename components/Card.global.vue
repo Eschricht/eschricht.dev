@@ -9,7 +9,7 @@ const props = withDefaults(defineProps<{
 
 const {
   className,
-} = useThemeLayer(1, props.theme)
+} = useThemeLayer(props.theme)
 </script>
 
 <template>
