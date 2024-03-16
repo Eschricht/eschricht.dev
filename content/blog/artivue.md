@@ -42,7 +42,9 @@ const {
   // A computed which tells if the theme is dark or not
   isDark,
   // A computed containing the generated theme config
-  theme
+  theme,
+  // The generated full theme configuration
+  generatedTheme
 } = useThemeLayer()
 ```
 
@@ -75,7 +77,7 @@ Hello
 ::
 
 Not only that, it is also possible to completely override the base theme! To do this, we simply pass a theme as the second argument.
-In the example below, the theme config passed to the `Card` component is passed to the composable - `useThemeLayer(0, props.theme)`
+In the example below, the theme config passed to the `Card` component is passed to the composable - `useThemeLayer(props.theme)`
 
 ```vue
 <template>
@@ -149,6 +151,8 @@ const {
   isDark
   // A ref containing the base theme configuration
   theme
+  // The generated full theme configuration
+  generatedTheme
 } = useBaseTheme()
 
 function toggleDark() {
