@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.4",
-    "@artivue/nuxt": "^0.1.15",
+    "@artivue/nuxt": "^0.2.1",
     "@artivue/unocss": "^0.0.2",
     "@iconify-json/carbon": "^1.1.27",
     "@iconify-json/twemoji": "^1.1.15",
@@ -34,7 +34,7 @@
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
     "animated-unocss": "^0.0.6",
-    "artivue": "^0.1.15",
+    "artivue": "^0.2.1",
     "consola": "^3.2.3",
     "eslint": "^8.57.0",
     "eslint-plugin-format": "^0.1.0",
