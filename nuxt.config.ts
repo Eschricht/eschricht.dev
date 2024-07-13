@@ -14,7 +14,14 @@ export default defineNuxtConfig({
     'floating-vue/nuxt',
     '@artivue/nuxt',
     '@nuxtjs/seo',
+    '@nuxt/image',
   ],
+
+  nitro: {
+    prerender: {
+      routes: ['/'],
+    },
+  },
 
   site: {
     url: 'https://eschricht.dev',
@@ -49,7 +56,7 @@ export default defineNuxtConfig({
         default: 'vitesse-light',
         dark: 'vitesse-dark',
       },
-      langs: ['vue', 'javascript', 'typescript', 'md', 'json', 'css'],
+      langs: ['vue', 'javascript', 'typescript', 'md', 'json', 'css', 'ts', 'bash'],
     },
   },
 
@@ -98,4 +105,5 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: true },
+  compatibilityDate: '2024-07-13',
 })

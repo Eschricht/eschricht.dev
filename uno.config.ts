@@ -32,7 +32,7 @@ export default defineConfig<Theme>({
       cssExtend: () => ({
         'pre,code': {
           background: 'rgba(var(--artivue-surface-dark), 1)',
-          color: 'rgba(var(--artivue-text-alt-1), 1)',
+          color: 'rgba(var(--artivue-surface-text-alt-1), 1)',
         },
         'code': {
           'padding': '0.25rem',
@@ -49,7 +49,7 @@ export default defineConfig<Theme>({
           display: 'none',
         },
         'a': {
-          'color': 'rgba(var(--artivue-accent))',
+          'color': 'rgba(var(--artivue-accent-bg))',
           'text-decoration': 'underline',
         },
 

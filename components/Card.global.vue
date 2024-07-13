@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { BaseTheme, themes } from 'artivue'
+import type { Theme } from 'artivue'
 
 const props = withDefaults(defineProps<{
-  theme?: BaseTheme
+  theme?: Theme
 }>(), {
   theme: undefined,
 })
@@ -13,7 +13,7 @@ const {
 </script>
 
 <template>
-  <div :class="className" un-artivue="surface-var" un-border="~ artivue-border" un-rounded="lg">
+  <div :class="className" un-artivue="surface" un-border="~ artivue-surface-border" un-rounded="lg">
     <slot />
   </div>
 </template>
