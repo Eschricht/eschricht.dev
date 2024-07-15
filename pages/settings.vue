@@ -43,9 +43,9 @@ watch(defaultTheme, (dt) => {
     <div un-inline="flex" un-flex="wrap" un-gap="4">
       <label v-for="key in keys" :key="key">
         <p un-text="xs">{{ keyMap[key] }}</p>
-        <label un-artivue="input" un-p="x-2" un-inline="flex" un-items="center" un-gap="2" un-w="fit">
+        <label un-artivue="input-within" un-p="x-2 y-1" un-inline="flex" un-items="center" un-gap="2" un-w="fit">
           <input v-model="defaultTheme[key.split('.')[0]][key.split('.')[1]]" un-h="1.5em" un-bg="transparent" type="color">
-          <span un-text="artivue-text-alt-3 sm">{{ defaultTheme[key.split('.')[0]][key.split('.')[1]] }}</span>
+          <span un-text="artivue-surface-text-alt-3 sm">{{ defaultTheme[key.split('.')[0]][key.split('.')[1]] }}</span>
         </label>
       </label>
     </div>
