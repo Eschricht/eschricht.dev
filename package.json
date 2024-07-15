@@ -45,7 +45,6 @@
     "nuxt-seo-experiments": "^4.0.0-rc.10",
     "nuxt-typed-router": "^3.6.5",
     "pinia": "^2.1.7",
-    "shiki": "^1.10.3",
     "supabase": "^1.148.6",
     "typescript": "^5.5.3",
     "unocss": "^0.61.3",
