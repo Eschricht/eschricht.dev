@@ -23,7 +23,7 @@ definePageMeta({
         un-text="artivue-text"
         un-font="400"
         un-decoration="none"
-        un-border="b artivue-text/30 hover:artivue-text"
+        un-border="b artivue-surface-text/30 hover:artivue-surface-text"
         un-transition="colors"
         un-duration="400"
         un-relative
@@ -49,7 +49,7 @@ definePageMeta({
         un-text="artivue-text"
         un-font="400"
         un-decoration="none"
-        un-border="b artivue-text/30 hover:artivue-text"
+        un-border="b artivue-surface-text/30 hover:artivue-surface-text"
         un-transition="colors"
         un-duration="400"
       >Nuxt Content</a> but lets see what will come out of it. Hopefully it won't be just another unfinished project... 👀

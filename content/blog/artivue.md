@@ -35,7 +35,7 @@ To solve this, the plugin is provided with a composable to add layers named `use
 
 Usage:
 
-```typescript
+```ts
 const {
   // This has to be placed on the element where the theme should start overriding
   className,
@@ -83,19 +83,15 @@ In the example below, the theme config passed to the `Card` component is passed 
 <template>
   <Card
     :theme="{
-      accentColor: '#2b6be3',
-      accentTextColor: '#fff',
-      surfaceColor: '#2c5963',
-      surfaceTextColor: '#fff',
+      accent: { background: '#2b6be3', text: '#fff' },
+      surface: { background: '#2c5963', text: '#fff' },
     }"
   >
     <Card>
       <Card
         :theme="{
-          accentColor: '#2b6be3',
-          accentTextColor: '#fff',
-          surfaceColor: '#3e2b46',
-          surfaceTextColor: '#fff',
+          accent: { background: '#2b6be3', text: '#fff' },
+          surface: { background: '#3e2b46', text: '#fff' },
         }"
       >
         <Card> Hello </Card>
@@ -105,9 +101,9 @@ In the example below, the theme config passed to the `Card` component is passed 
 </template>
 ```
 
-::Card{ class="p-4" :theme='{ "accentColor": "#2b6be3", "accentTextColor": "#fff", "surfaceColor": "#2c5963", "surfaceTextColor": "#fff" }' }
+::Card{ class="p-4" :theme='{ "accent": { "background": "#2b6be3", "text": "#fff" }, "surface": { "background": "#2c5963", "text": "#fff" } }' }
 :::Card{ class="p-4" }
-::::Card{ class="p-4" :theme='{ "accentColor": "#2b6be3", "accentTextColor": "#fff", "surfaceColor": "#3e2b46", "surfaceTextColor": "#fff" }' }
+::::Card{ class="p-4" :theme='{ "accent": { "background": "#2b6be3", "text": "#fff" }, "surface": { "background": "#3e2b46", "text": "#fff" } }' }
 :::::Card{ class="px-4" }
 Hello
 :::::

@@ -5,14 +5,19 @@ const { className } = useThemeLayer(1)
 const navRoutes = [{
   name: 'Blog',
   path: localeRoute('/blog'),
-}, {
+},
+// {
+//   name: 'Templates',
+//   path: localeRoute('/templates'),
+// },
+{
   name: 'Settings',
   path: localeRoute('/settings'),
 }]
 </script>
 
 <template>
-  <header :class="className" un-fixed un-z="30" un-inset="t-0 x-0" un-text="artivue-text-alt-3" un-bg="artivue-surface/95" un-backdrop-blur="6" un-border="b artivue-border" un-flex un-items="center" un-justify="between" un-h="12 md:16">
+  <header :class="className" un-fixed un-z="30" un-inset="t-0 x-0" un-text="artivue-text-alt-3" un-bg="artivue-surface-bg/95" un-backdrop-blur="6" un-border="b artivue-surface-border" un-flex un-items="center" un-justify="between" un-h="12 md:16">
     <div un-flex un-items="center" un-p="x4" un-h="full">
       <NuxtLink :to="localeRoute('/')" un-text="artivue-text" un-transition="colors" un-duration="300">
         <MyLogo un-w="24 md:36" />
