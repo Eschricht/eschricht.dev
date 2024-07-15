@@ -5,7 +5,12 @@ const { className } = useThemeLayer(1)
 const navRoutes = [{
   name: 'Blog',
   path: localeRoute('/blog'),
-}, {
+},
+// {
+//   name: 'Templates',
+//   path: localeRoute('/templates'),
+// },
+{
   name: 'Settings',
   path: localeRoute('/settings'),
 }]
